@@ -1,0 +1,10 @@
+{
+  "name": "ghostkrieg_helper",
+  "version": "1.0.0",
+  "description": "Helper bot for specialized Ghostkrieg games",
+  "main": "bot.js",
+  "repository": "https://codeberg.org/ghostelephant/ghostkrieg_helper.git",
+  "author": "ghostelephant",
+  "license": "MIT",
+  "private": false
+}

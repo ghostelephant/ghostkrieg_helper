@@ -1,0 +1,1 @@
+A sorta slapdash bot for running functions on specialty games in Ghostkrieg
