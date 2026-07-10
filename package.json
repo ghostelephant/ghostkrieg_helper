@@ -6,5 +6,11 @@
   "repository": "https://codeberg.org/ghostelephant/ghostkrieg_helper.git",
   "author": "ghostelephant",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "dependencies": {
+    "discord.js": "^14.26.5",
+    "dotenv": "^17.4.2",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
+  }
 }
