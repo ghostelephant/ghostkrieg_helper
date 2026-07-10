@@ -5,9 +5,7 @@ const userWhitelist = {
 };
 
 const rotate = async interaction => {
-  await interaction.deferReply({
-    flags: MessageFlags.Ephemeral
-  });
+  await interaction.deferReply();
 
   const {guildId, channelId, user: {id: userId}} = interaction;
   
@@ -17,8 +15,7 @@ const rotate = async interaction => {
     const rotationResult = rotateGame({guildId, channelId});
 
     await interaction.followUp({
-      content: rotationResult,
-      flags: MessageFlags.Ephemeral
+      content: rotationResult
     });
   }
 
