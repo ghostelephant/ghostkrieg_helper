@@ -1,7 +1,16 @@
+const path = require("path");
+
 const rotateGame = ({guildId, channelId}) => {
   try{
     const {writeFileSync} = require("fs");
-    const filePath = `../../saves/${guildId}/${channelId}.json`;
+    const filePath = path.join(
+      __dirname,
+      "..",
+      "..",
+      "saves",
+      guildId,
+      `${channelId}.json`
+    );
 
     const gameData = require(filePath);
     writeFileSync(`${filePath}.bak`, JSON.stringify(gameData, null, 2));
