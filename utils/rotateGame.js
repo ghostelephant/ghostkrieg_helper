@@ -1,8 +1,11 @@
 const path = require("path");
+const {
+  readFileSync,
+  writeFileSync
+} = require("fs");
 
 const rotateGame = ({guildId, channelId}) => {
   try{
-    const {writeFileSync} = require("fs");
     const filePath = path.join(
       __dirname,
       "..",
@@ -12,7 +15,10 @@ const rotateGame = ({guildId, channelId}) => {
       `${channelId}.json`
     );
 
-    const gameData = require(filePath);
+    const gameData = JSON.parse(
+      readFileSync(filePath, "utf-8")
+    );
+    // Create back-up
     writeFileSync(`${filePath}.bak`, JSON.stringify(gameData, null, 2));
 
     const players = JSON.parse(JSON.stringify(gameData.players));
